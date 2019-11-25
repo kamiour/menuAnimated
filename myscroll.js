@@ -4,6 +4,10 @@ for (let i = 0; i < sections.length; i++) {
     sections[i].style.opacity = '0.5';
 }
 
+function callBack() {
+    console.log('done');
+}
+
 $(document).ready(function(){
     let scrollElems = $('.scrollPage');
     let scrolledToDown = [0];
@@ -31,14 +35,25 @@ $(document).ready(function(){
                     scrolledToDown.push(i);
                     $('html, body').animate({
                         scrollTop: scrollElems[i].offsetTop
-                    }, 500, 'easeInCubic');
+                    }, {
+                        duration: 500,
+                        easing: "easeInCubic",
+                    }).promise().then(function() {
+                        console.log('Animation for all elements (html and body) to go down complete');
+                      });
                     currentSection = i;
                 }
             } else if (direction < 0 && currentSection > 0) {
                 if (this.scrollY < scrollElems[currentSection-1].offsetTop + scrollDist) {
                     $('html, body').animate({
                         scrollTop: scrollElems[currentSection-1].offsetTop
-                    }, 500, 'easeInCubic');
+                    }, {
+                        duration: 500,
+                        easing: "easeInCubic",
+                    }).promise().then(function() {
+                        console.log('Animation for all elements (html and body) to go up complete');
+                        
+                      });
                     currentSection--;
                     scrolledToDown.pop(currentSection);
                 }
