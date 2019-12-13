@@ -3,22 +3,31 @@
 
   <head>
     <meta charset="utf-8">
-    <title>ScrollMagneto</title>
+    <title>Menu Animated</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,300i,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
   </head>
 
   <body>
-    <div class="section scrollPage">Section 1. Scroll down</div>
-    <div class="section scrollPage">Section 2. Scroll up or down</div>
-    <div class="section scrollPage">Section 3. Scroll up or down</div>
-    <div class="section scrollPage">Section 4. Scroll up or down</div>
-    <div class="section scrollPage">Section 5. Scroll up</div>
+    <a class="dropdown-toggle burger-menu burger-button" href="#menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <div id="nav-mobile" class="nav-mobile">
+      <ul class="dropdown">
+        <li><a href="services.html" class="nav-item-mob">Home</a></li>
+        <li><a href="technologies.html" class="nav-item-mob">About us</a></li>
+        <li><a href="#" class="nav-item-mob">Why us</a></li>
+        <li><a href="#" class="nav-item-mob">Blog</a></li>
+        <li><a href="#" class="nav-item-mob">About us</a></li>
+        <li><a href="#" class="nav-item-mob">Check more</a></li>
+        <li><a href="#" class="nav-item-mob">Contact Us</a></li>
+      </ul>
+      <a href="#" class="close-button"></a>
+    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <script src="myscroll.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
